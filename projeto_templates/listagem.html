@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Num_Alunos</th>
+        <th>Idade</th>
+    </tr>
+    {% for diretor in lista %}
+        <tr>
+            <td>{{ diretor.pid }}</td>
+            <td>{{ diretor.nome }}</td>
+            <td>{{ diretor.email }}</td>
+            <td>{{ diretor.num_alunos }}</td>
+            <td>{{ diretor.idade }}</td>
+            <td><a href="/diretor/{{ diretor.pid }}">Editar</a></td>
+            <td><a href="/diretor/remover/{{ diretor.pid }}">Remover</a></td>            
+        </tr>
+    {% endfor %}
+</table>
+
+<a href=/diretor/novo>Clique aqui para adicionar</a>
